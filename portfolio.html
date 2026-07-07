@@ -12,79 +12,129 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      color: #333333;
-      background-color: #f4f4f4;
+      color: #2f2f2f;
+      background-color: #f8f5f2;
     }
 
     header {
-      padding: 50px 20px;
+      padding: 80px 20px;
       color: white;
       text-align: center;
-      background-color: #5c4b8a;
+      background: linear-gradient(135deg, #5c4b8a, #9b5de5);
+    }
+
+    header h1 {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-bottom: 20px;
     }
 
     nav {
       padding: 15px;
       text-align: center;
-      background-color: #333333;
+      background-color: #2f2f2f;
     }
 
     nav a {
       margin: 0 12px;
       color: white;
       text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
     }
 
     nav a:hover {
       color: #ffd166;
+      text-decoration: none;
     }
 
     main {
-      margin: 30px auto;
+      margin: 40px auto;
     }
 
     section {
       margin-bottom: 25px;
-      padding: 25px;
+      padding: 28px;
       background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
     }
 
     h2 {
       color: #5c4b8a;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #333333;
     }
 
     .profile-photo {
       display: block;
-      width: 180px;
-      height: 180px;
+      width: 170px;
+      height: 170px;
       margin: 0 auto 20px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #5c4b8a;
+      border: 5px solid #9b5de5;
+    }
+
+    .tagline {
+      display: inline-block;
+      padding: 8px 18px;
+      background-color: rgba(255, 255, 255, 0.20);
+      border-radius: 30px;
+      font-size: 16px;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      margin: 6px;
+      padding: 8px 12px;
+      color: white;
+      background-color: #5c4b8a;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .project-card {
+      border-left: 5px solid #9b5de5;
     }
 
     footer {
-      padding: 20px;
+      padding: 25px;
       color: white;
       text-align: center;
-      background-color: #333333;
+      background-color: #2f2f2f;
     }
   </style>
 </head>
 
 <body>
 
-  <header id="home" class="text-center">
+  <header id="home">
     <h1>Ayazhan Zhanshakhan</h1>
-    <p>Welcome to my online portfolio</p>
+    <p class="tagline">English Teacher | Graduate Student | Educational Technology Enthusiast</p>
+    <p>Welcome to my digital portfolio</p>
   </header>
 
- <nav id="navigation" class="text-center">
-    <a href="#about">About Me</a>
+  <nav id="navigation">
+    <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
     <a href="index.html">Activity 1</a>
   </nav>
@@ -100,7 +150,7 @@
 
           <p>Hello! My name is Zhanshakhan Ayazhan. I am an English teacher who is passionate about education, creativity, and modern technology.</p>
 
-          <p>I enjoy teaching school students and creating interactive lessons, speaking activities, worksheets, quests, and assessment tasks.</p>
+          <p>I enjoy creating interactive lessons, worksheets, speaking activities, quests, and digital learning materials for students.</p>
 
           <blockquote>
             “Learn with curiosity, teach with creativity, and grow with confidence.”
@@ -112,17 +162,14 @@
         <section id="education">
           <h2>Education</h2>
 
-          <h3>Kazakh Ablai Khan University of International Relations and World Languages</h3>
-          <p>Bachelor's Degree in Two Foreign Languages</p>
-          <p>Graduated in 2022</p>
+          <h3>Kazakh Ablai Khan University</h3>
+          <p>Bachelor's Degree in Two Foreign Languages — 2022</p>
 
           <h3>L.N. Gumilyov Eurasian National University</h3>
-          <p>Master's Degree in Two Foreign Languages</p>
-          <p>Graduated in 2024</p>
+          <p>Master's Degree in Two Foreign Languages — 2024</p>
 
           <h3>University of Utah</h3>
-          <p>Master of Education</p>
-          <p>2025–Present</p>
+          <p>Master of Education — 2025–Present</p>
         </section>
       </div>
     </div>
@@ -132,32 +179,43 @@
         <section id="skills">
           <h2>Professional Skills</h2>
 
-          <ul>
-            <li>Lesson planning and curriculum development</li>
-            <li>Classroom management</li>
-            <li>Student-centered teaching</li>
-            <li>Clear communication and active listening</li>
-            <li>Assessment and constructive feedback</li>
-            <li>Educational technology and digital tools</li>
-          </ul>
+          <span class="skill-badge">Lesson Planning</span>
+          <span class="skill-badge">Classroom Management</span>
+          <span class="skill-badge">Student-centered Teaching</span>
+          <span class="skill-badge">Assessment</span>
+          <span class="skill-badge">Educational Technology</span>
+          <span class="skill-badge">Digital Materials</span>
+          <span class="skill-badge">Communication</span>
+          <span class="skill-badge">Creativity</span>
         </section>
       </div>
 
       <div class="col-md-6">
+        <section id="projects" class="project-card">
+          <h2>Projects</h2>
+
+          <h3>Activity 1 Website</h3>
+          <p>This project introduced the basic structure of an HTML webpage.</p>
+
+          <h3>Digital Portfolio</h3>
+          <p>This portfolio demonstrates HTML, CSS styling, and Bootstrap 4 grid layout.</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
         <section id="contact">
           <h2>Contact</h2>
 
           <p>Email: zhanshakhan07@gmail.com</p>
 
-          <p>
-            <a href="https://github.com/ayashka07"
-   class="btn btn-primary"
-   target="_blank"
-   rel="noopener noreferrer">
-   Visit my GitHub Profile
-</a>
-            </a>
-          </p>
+          <a href="https://github.com/ayashka07"
+             class="btn btn-primary"
+             target="_blank"
+             rel="noopener noreferrer">
+             Visit my GitHub Profile
+          </a>
         </section>
       </div>
     </div>
@@ -165,7 +223,7 @@
   </main>
 
   <footer id="footer">
-    <p>&copy; 2026 Ayazhan Zhanshakhan</p>
+    <p>&copy; 2026 Ayazhan Zhanshakhan | Digital Portfolio</p>
   </footer>
 
 </body>
