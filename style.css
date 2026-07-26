@@ -11,8 +11,8 @@ body {
   background: #ffffff;
   color: #1a1a1a;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 a {
@@ -45,7 +45,7 @@ a {
   display: block;
   margin-bottom: 26px;
   color: #2447e6;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.3;
   text-decoration: none;
@@ -60,7 +60,7 @@ a {
   width: fit-content;
   margin-bottom: 10px;
   color: #707070;
-  font-size: 15px;
+  font-size: 16px;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -73,14 +73,14 @@ a {
   max-width: 210px;
   margin: 0;
   color: #5f5f5f;
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .small-text {
   margin-top: 24px;
   color: #909090;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* ОСНОВНОЙ КОНТЕНТ */
@@ -104,7 +104,7 @@ a {
 .section-label {
   margin: 0 0 12px;
   color: #888888;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 1.8px;
 }
@@ -120,19 +120,17 @@ h1 {
   margin: 0 0 22px;
   font-size: 38px;
   font-weight: 600;
-  letter-spacing: -0.6px;
 }
 
 h2 {
   margin: 0 0 30px;
   font-size: 30px;
   font-weight: 600;
-  letter-spacing: -0.3px;
 }
 
 h3 {
   margin: 10px 0 15px;
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -140,29 +138,24 @@ p {
   max-width: 720px;
   margin-top: 0;
   margin-bottom: 18px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .hero-text {
   max-width: 720px;
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.65;
 }
 
 /* ФОТО */
 
-.photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.profile-photo {
+  display: block;
   width: 100%;
-  max-width: 720px;
-  height: 410px;
-  margin-top: 38px;
+  max-width: 380px;
+  height: auto;
+  margin-top: 30px;
   border: 1px solid #e4e4e4;
-  background: #f2f2f2;
-  color: #858585;
-  font-size: 14px;
 }
 
 /* ПРОЕКТЫ */
@@ -203,14 +196,14 @@ p {
 .project-details {
   margin-bottom: 8px;
   color: #555555;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .text-link {
   display: inline-block;
   margin-top: 8px;
   color: #2447e6;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -233,7 +226,7 @@ p {
   border: 1px solid #1a1a1a;
   background: transparent;
   color: #1a1a1a;
-  font-size: 15px;
+  font-size: 16px;
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -268,7 +261,7 @@ p {
 
 .contact-links a {
   color: #2447e6;
-  font-size: 15px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -285,10 +278,10 @@ footer {
 
 footer p {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-/* ПЛАНШЕТЫ И ТЕЛЕФОНЫ */
+/* ПЛАНШЕТЫ */
 
 @media (max-width: 800px) {
   .layout {
@@ -302,10 +295,6 @@ footer p {
     padding: 30px 24px;
     border-right: none;
     border-bottom: 1px solid #e2e2e2;
-  }
-
-  .name {
-    font-size: 18px;
   }
 
   .sidebar nav {
@@ -345,14 +334,22 @@ footer p {
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 21px;
+  }
+
+  p {
+    font-size: 17px;
   }
 
   .hero-text {
-    font-size: 18px;
+    font-size: 19px;
   }
 
-  .photo-placeholder,
+  .profile-photo {
+    max-width: 340px;
+    height: auto;
+  }
+
   .project-image {
     height: 260px;
   }
@@ -362,9 +359,11 @@ footer p {
   }
 }
 
+/* ТЕЛЕФОНЫ */
+
 @media (max-width: 480px) {
   body {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .sidebar {
@@ -383,111 +382,21 @@ footer p {
     font-size: 25px;
   }
 
-  .hero-text {
-    font-size: 17px;
+  p {
+    font-size: 16px;
   }
 
-  .photo-placeholder,
+  .hero-text {
+    font-size: 18px;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
   .project-image {
     height: 220px;
-  }
-}
-.profile-photo {
-  display: block;
-  width: 100%;
-  max-width: 720px;
-  height: 410px;
-  margin-top: 38px;
-  object-fit: cover;
-  border: 1px solid #e4e4e4;
-}
-
-@media (max-width: 800px) {
-  .profile-photo {
-    height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-photo {
-    height: 220px;
-  }
-}
-/* ОБНОВЛЁННЫЕ РАЗМЕРЫ */
-
-body {
-  font-size: 18px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.hero-text {
-  font-size: 21px;
-}
-
-.profile-photo {
-  width: 100%;
-  max-width: 520px;
-  height: 320px;
-  margin-top: 30px;
-  object-fit: cover;
-}
-
-.sidebar nav a {
-  font-size: 16px;
-}
-
-.intro {
-  font-size: 15px;
-}
-
-@media (max-width: 800px) {
-  .profile-photo {
-    max-width: 100%;
-    height: 280px;
-  }
-
-  p {
-    font-size: 17px;
-  }
-
-  .hero-text {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-photo {
-    height: 230px;
-  }
-}
-/* Исправление размера фотографии */
-
-.profile-photo {
-  display: block;
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  margin-top: 30px;
-  object-fit: contain;
-  border: 1px solid #e4e4e4;
-}
-
-@media (max-width: 800px) {
-  .profile-photo {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .profile-photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
   }
 }
