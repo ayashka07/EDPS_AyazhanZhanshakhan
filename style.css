@@ -2,71 +2,296 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #111;
-  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #161616;
+  background: #ffffff;
+  line-height: 1.6;
 }
+
+a {
+  color: inherit;
+}
+
+/* Основная структура */
 
 .layout {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 270px 1fr;
   min-height: 100vh;
 }
 
+/* Левая панель */
+
 .sidebar {
-  padding: 50px 24px;
-  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100vh;
+  padding: 48px 26px;
+  border-right: 1px solid #dddddd;
+  background: #ffffff;
 }
 
-.sidebar h1 {
-  margin: 0 0 24px;
-  font-size: 24px;
+.name {
+  display: block;
+  margin-bottom: 24px;
+  color: #1d3cff;
+  font-size: 20px;
   font-weight: 500;
+  text-decoration: none;
+}
+
+.sidebar nav {
+  margin-bottom: 34px;
 }
 
 .sidebar nav a {
   display: block;
-  margin: 14px 0;
-  color: #555;
+  margin-bottom: 10px;
+  color: #777777;
+  font-size: 14px;
   text-decoration: none;
 }
 
 .sidebar nav a:hover {
-  color: blue;
+  color: #1d3cff;
 }
 
-.sidebar p {
-  margin-top: 30px;
-  line-height: 1.6;
-  color: #666;
+.intro {
+  max-width: 200px;
+  color: #666666;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.55;
 }
+
+.small-text {
+  margin-top: 24px;
+  color: #999999;
+  font-size: 12px;
+}
+
+/* Основной контент */
 
 .content {
-  padding: 60px 70px;
+  grid-column: 2;
+  width: 100%;
+  max-width: 1100px;
+  padding: 54px 70px 40px;
 }
 
-.content h2 {
-  font-size: 32px;
-  margin-top: 0;
+.section {
+  padding: 15px 0 90px;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.hero {
-  max-width: 750px;
+.section-label {
+  margin-bottom: 10px;
+  color: #888888;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
-@media (max-width: 700px) {
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 32px;
+  font-size: 34px;
+}
+
+h3 {
+  margin: 10px 0 15px;
+  font-size: 22px;
+}
+
+p {
+  max-width: 720px;
+}
+
+.hero-text {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/* Фото */
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 720px;
+  height: 420px;
+  margin-top: 38px;
+  background: #eeeeee;
+  color: #888888;
+  font-size: 14px;
+}
+
+/* Проекты */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+
+.project-card {
+  max-width: 800px;
+  padding-bottom: 35px;
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 330px;
+  margin-bottom: 20px;
+  background: #eeeeee;
+  color: #888888;
+}
+
+.project-number {
+  margin-bottom: 4px;
+  color: #999999;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.project-details {
+  color: #555555;
+  font-size: 14px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1d3cff;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* CV */
+
+.cv-block {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: 1px solid #161616;
+  color: #161616;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #161616;
+  color: #ffffff;
+}
+
+/* Cover Letter */
+
+.letter {
+  max-width: 720px;
+  padding: 30px;
+  background: #f7f7f7;
+}
+
+/* Contact */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  color: #1d3cff;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  padding-top: 35px;
+  color: #999999;
+  font-size: 12px;
+}
+
+/* Планшеты и телефоны */
+
+@media (max-width: 800px) {
   .layout {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
   .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 30px 24px;
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .sidebar nav a {
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  .intro {
+    max-width: 500px;
   }
 
   .content {
-    padding: 35px 24px;
+    width: 100%;
+    padding: 40px 24px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero-text {
+    font-size: 19px;
+  }
+
+  .photo-placeholder,
+  .project-image {
+    height: 260px;
   }
 }
