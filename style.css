@@ -392,3 +392,24 @@ footer p {
     height: 220px;
   }
 }
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 410px;
+  margin-top: 38px;
+  object-fit: cover;
+  border: 1px solid #e4e4e4;
+}
+
+@media (max-width: 800px) {
+  .profile-photo {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    height: 220px;
+  }
+}
