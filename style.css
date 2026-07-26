@@ -400,3 +400,11 @@ footer p {
     height: 220px;
   }
 }
+.project-cover {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 22px;
+  border: 1px solid #e4e4e4;
+}
