@@ -464,3 +464,30 @@ p {
     height: 230px;
   }
 }
+/* Исправление размера фотографии */
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin-top: 30px;
+  object-fit: contain;
+  border: 1px solid #e4e4e4;
+}
+
+@media (max-width: 800px) {
+  .profile-photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
